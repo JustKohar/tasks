@@ -14,7 +14,7 @@ module.exports = {
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
     ],
-    root: true,
+    root: __dirname,
     parser: "@typescript-eslint/parser",
     plugins: ["@typescript-eslint", "react"],
     overrides: [
