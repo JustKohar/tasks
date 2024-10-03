@@ -23,7 +23,7 @@ import { Button } from "react-bootstrap";
         </div>
     );
 }**/
-interface MoveableBox {
+interface MoveableBox2 {
     position: number;
     setPosition: (newPosition: number) => void;
 }
@@ -46,7 +46,7 @@ function ShoveBoxButton({
     );
 }
 
-function MoveableBox(props: MoveableBox): React.JSX.Element {
+function MoveableBox(props: MoveableBox2): React.JSX.Element {
     return (
         <div
             data-testid="moveable-box"
