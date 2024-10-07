@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 
-export function MultipleChoiceQuestions({
+export function MultipleChoiceQuestion({
     expectedAnswer,
     options
 }: {

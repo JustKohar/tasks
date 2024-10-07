@@ -13,7 +13,7 @@ import { ChooseTeam } from "./bad-components/ChooseTeam";
 import { CheckAnswer } from "./form-components/CheckAnswer";
 import { GiveAttempts } from "./form-components/GiveAttempts";
 import { EditMode } from "./form-components/EditMode";
-import { MultipleChoiceQuestions } from "./form-components/MultipleChoiceQuestion";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
 import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): React.JSX.Element {
@@ -31,10 +31,10 @@ function App(): React.JSX.Element {
             <hr></hr>
             <ChangeColor></ChangeColor>
             <hr></hr>
-            <MultipleChoiceQuestions
+            <MultipleChoiceQuestion
                 options={["a", "b", "c"]}
                 expectedAnswer="b"
-            ></MultipleChoiceQuestions>
+            ></MultipleChoiceQuestion>
             <hr></hr>
             <DoubleHalf></DoubleHalf>
             <hr></hr>
