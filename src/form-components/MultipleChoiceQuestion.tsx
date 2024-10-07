@@ -1,30 +1,30 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 
-export function MultipleChoiceQuestions({ options }: { options: string[] }): React.JSX.Element {
-    const [selectedOption, setSelectedOption] = useState<string | null>(null);
-
-    function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setSelectedOption(event.target.value);
-    }
+export function MultipleChoiceQuestions({
+    expectedAnswer,
+    options
+}: {
+    expectedAnswer: string;
+    options: string[];
+}): React.JSX.Element {
+    const [selectedChoice, setSelectedChoice] = useState<string>(options[0]);
 
     return (
         <div>
-            <h3>Multiple Choice Question</h3>
-            <Form>
-                {options.map((option) => (
-                    <Form.Check
-                        key={option}
-                        type="radio"
-                        label={option}
-                        value={option}
-                        checked={selectedOption === option}
-                        onChange={handleChange}
-                    />
-                ))}
-            </Form>
+            <h3>Multiple Choice Questions</h3>
+                <Form.Select
+                    value={selectedChoice}
+                    onChange = {(e) => {setSelectedChoice(e.target.value)}}
+                >
+                    {options.map((option, index) => (
+                        <option key={index} value={option}>
+                            {option}
+                        </option>
+                    ))}
+                </Form.Select>
             <div>
-                {selectedOption && `Selected: ${selectedOption}`}
+                {selectedChoice === expectedAnswer ? "✔️" : "❌"}
             </div>
         </div>
     );
