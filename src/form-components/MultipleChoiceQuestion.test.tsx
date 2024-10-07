@@ -1,12 +1,12 @@
 import React, { act } from "react";
 import { render, screen } from "@testing-library/react";
-import { MultipleChoiceQuestions } from "./MultipleChoiceQuestion";
+import { MultipleChoiceQuestion } from "./MultipleChoiceQuestion";
 import userEvent from "@testing-library/user-event";
 
 describe("MultipleChoiceQuestion Component tests", () => {
     test("(2 pts) There is a select box", () => {
         render(
-            <MultipleChoiceQuestions
+            <MultipleChoiceQuestion
                 expectedAnswer="2"
                 options={["1", "2", "3"]}
             />,
@@ -15,7 +15,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
     });
     test("(2 pts) The answer is initially incorrect", () => {
         render(
-            <MultipleChoiceQuestions
+            <MultipleChoiceQuestion
                 expectedAnswer="2"
                 options={["1", "2", "3"]}
             />,
@@ -25,7 +25,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
     });
     test("(2 pts) Can choose the correct answer", async () => {
         render(
-            <MultipleChoiceQuestions
+            <MultipleChoiceQuestion
                 expectedAnswer="2"
                 options={["1", "2", "3"]}
             />,
@@ -39,7 +39,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
     });
     test("(2 pts) Can choose the correct answer and then incorrect", async () => {
         render(
-            <MultipleChoiceQuestions
+            <MultipleChoiceQuestion
                 expectedAnswer="2"
                 options={["1", "2", "3"]}
             />,
@@ -58,7 +58,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
     });
     test("(2 pts) Can start off initially correct", async () => {
         render(
-            <MultipleChoiceQuestions
+            <MultipleChoiceQuestion
                 expectedAnswer="Alpha"
                 options={["Alpha", "Beta", "Gamma"]}
             />,
@@ -72,7 +72,7 @@ describe("MultipleChoiceQuestion Component tests", () => {
     });
     test("(2 pts) One more test of choosing the right answer", async () => {
         render(
-            <MultipleChoiceQuestions
+            <MultipleChoiceQuestion
                 expectedAnswer="World"
                 options={["Hello", "World"]}
             />,
