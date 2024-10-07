@@ -1,28 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
-/**export function ShoveBox(): React.JSX.Element {
-    const [marginLeft, setMarginLeft] = useState<number>(10);
 
-    function shoveBox() {
-        setMarginLeft((prevMargin) => prevMargin + 10);
-    }
-
-    return (
-        <div>
-            <Button onClick={shoveBox}>Shove Box</Button>
-            <div
-                style={{
-                    width: "100px",
-                    height: "100px",
-                    backgroundColor: "lightblue",
-                    marginLeft: `${marginLeft}px`,
-                    display: "inline-block"
-                }}
-            ></div>
-        </div>
-    );
-}**/
 interface MoveableBox2 {
     position: number;
     setPosition: (newPosition: number) => void;
