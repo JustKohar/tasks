@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
+
 interface MoveableBox2 {
     position: number;
     setPosition: (newPosition: number) => void;
